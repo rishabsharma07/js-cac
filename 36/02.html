@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Timeout</title>
+</head>
+<body>
+    <h1 id="head">Rishab Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayRishab= function(){
+        console.log("Rishab");
+        
+    }
+    const changeText= function(){
+        document.querySelector('#head').innerHTML="Code with Rishab"
+    }
+
+    // const changeMe= setTimeout(sayRishab,2000)  //ye 2 sec ke baad is function ko 1 baar execute krega bs
+
+    const changeHead= setTimeout(changeText,2000)
+    document.querySelector('#stop').addEventListener('click',()=>{
+        clearTimeout(changeHead)
+        console.log("STOPPED");
+        
+    })
+
+</script>
+</html>
